@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.test {
+  animation: 0.5s ease-in-out showUp forwards;
+}
+.lol {
+  opacity: 0;
+  animation: 0.2s ease-in-out fadeIn forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showUp {
+  0% {
+    height: 0;
+    position: absolute;
+    top: 100%;
+  }
+  50% {
+    top: 320px;
+    height: 100%;
+  }
+  100% {
+    position: initial;
+  }
+}
